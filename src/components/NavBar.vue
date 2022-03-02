@@ -1,17 +1,23 @@
 <template style="background-color:#000;">
 <div>
   <b-navbar toggleable="lg" type="dark" variant="dark">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
-
+    <router-link to="/" class="no-underline">
+          <b-navbar-brand href="/">Contact Manager</b-navbar-brand>
+    </router-link>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="pull-right ms-auto">
-        <b-nav-item href="#"> <font-awesome-icon icon="fa-solid fa-house" color="white"/> Home</b-nav-item>
-        <b-nav-item href="#"> <font-awesome-icon icon="fa-solid fa-pencil" color="white"/> Add</b-nav-item>
-        <b-nav-item href="#"> <font-awesome-icon icon="fa-solid fa-question" color="white"/> About</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <router-link to="/" class="no-underline">
+          <b-nav-item href="/"> <font-awesome-icon icon="fa-solid fa-house" color="white"/> Home</b-nav-item>
+        </router-link>
+        <router-link to="/add" class="no-underline">
+          <b-nav-item href="#"> <font-awesome-icon icon="fa-solid fa-pencil" color="white"/> Add</b-nav-item>
+        </router-link>
+        <router-link to="/about" class="no-underline">
+        <b-nav-item href="/about"> <font-awesome-icon icon="fa-solid fa-question" color="white"/> About</b-nav-item>
+        </router-link>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -39,14 +45,7 @@ export default {
 </script>
 
 <style>
-.right{
-    text-align: right;
-    margin-right: 5px;
-    position: relative;
-    right: 10px;
-}
-.right{
-    display:flex;
-    justify-content: flex-end;
+.no-underline{
+  text-decoration:none;
 }
 </style>
