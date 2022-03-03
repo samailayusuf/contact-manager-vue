@@ -1,6 +1,6 @@
 <template style="background-color:#000;">
 <b-container>
- <div>{{$route.params.id}}</div>
+ <!--<div>{{$route.params.id}}</div>-->
     <b-form @submit="onSubmit" class="pull-left">
         <h5 style="padding:20px;background-color:#F0F0F0;">Edit Contact</h5>
         <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
