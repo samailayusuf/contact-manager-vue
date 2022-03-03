@@ -22,7 +22,6 @@ export default {
   },
   data () {
     return {
-      contact: [],
       visible: true
     }
   },
@@ -34,15 +33,16 @@ export default {
   mounted () {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
-        store.contacts = response.data
-        this.contacts = store.contacts
-        console.log(response.data)
+        if (store.contacts.length < 1) {
+          store.contacts = response.data
+          this.contacts = store.contacts
+          console.log(response.data)
+        }
       })
       .catch(err => console.log(err))
-
     this.$root.$on('bv::collapse::state', (collapseId, isJustShown) => {
-      console.log('collapseId:', collapseId)
-      console.log('isJustShown:', isJustShown)
+      // console.log('collapseId:', collapseId)
+      // console.log('isJustShown:', isJustShown)
     })
   }
 }

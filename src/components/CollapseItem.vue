@@ -12,7 +12,7 @@
     <font-awesome-icon icon="fa-solid fa-arrow-down" color="black" class="adjust-vertical"/>
     </div> <!-- Name and down arrow icon -->
     <div class="flex-row"> <!-- Edit and Delete icons-->
-      <font-awesome-icon icon="fa-solid fa-pencil" color="black" class="adjust-vertical" @click.stop=""/>
+      <font-awesome-icon icon="fa-solid fa-pencil" color="black" class="adjust-vertical" @click.stop="gotToEdit(id)"/>
       <font-awesome-icon icon="fa-solid fa-trash" color="black" class="adjust-vertical" @click.stop="deleteContact(id)"/>
     </div>
     </div>
@@ -55,6 +55,9 @@ export default {
       const newStore = store.contacts.filter((element) => element.id !== id)
       store.contacts = newStore
       console.log(store.contacts)
+    },
+    gotToEdit: function (id) {
+      this.$router.push(`/edit/${id}`)
     }
   },
   props: {
@@ -62,6 +65,8 @@ export default {
     email: String,
     phone: String,
     id: Number
+  },
+  mounted () {
   }
 }
 </script>
