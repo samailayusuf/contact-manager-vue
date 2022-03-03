@@ -13,7 +13,7 @@
           <b-nav-item href="/"> <font-awesome-icon icon="fa-solid fa-house" color="white"/> Home</b-nav-item>
         </router-link>
         <router-link to="/add" class="no-underline">
-          <b-nav-item href="#"> <font-awesome-icon icon="fa-solid fa-pencil" color="white"/> Add</b-nav-item>
+          <b-nav-item href="/add"> <font-awesome-icon icon="fa-solid fa-pencil" color="white"/> Add</b-nav-item>
         </router-link>
         <router-link to="/about" class="no-underline">
         <b-nav-item href="/about"> <font-awesome-icon icon="fa-solid fa-question" color="white"/> About</b-nav-item>

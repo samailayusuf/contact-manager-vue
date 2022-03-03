@@ -54,7 +54,7 @@ export default {
     deleteContact: function (id) {
       const newStore = store.contacts.filter((element) => element.id !== id)
       store.contacts = newStore
-      console.log(store.contacts)
+      console.log(store.contacts.length)
     },
     gotToEdit: function (id) {
       this.$router.push(`/edit/${id}`)

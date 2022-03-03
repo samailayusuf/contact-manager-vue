@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EditView from '../views/EditView.vue'
+import AddView from '../views/AddView.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/edit/:id',
     name: 'edit',
     component: EditView
+  },
+  {
+    path: '/add',
+    name: 'add',
+    component: AddView
   }
 ]
 
